@@ -4,6 +4,10 @@
 
 { config, pkgs, ... }:
 
+let
+  codex = pkgs.callPackage ./packages/codex.nix { };
+in
+
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -114,6 +118,7 @@
     # dev
     git
     nodejs
+    codex
     zed-editor
 
 
