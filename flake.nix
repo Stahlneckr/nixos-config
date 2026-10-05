@@ -19,6 +19,9 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            # Back up existing unmanaged files when adopting them, notably
+            # the GTK settings inherited from Plasma. Never force-delete them.
+            home-manager.backupFileExtension = "before-home-manager";
             home-manager.users.nick = import ./home/nick/home.nix;
           }
         ];
