@@ -2,10 +2,10 @@
 
 let
   dotfiles = "${config.home.homeDirectory}/Documents/dotfiles";
-  appConfigs = [ "ghostty" "nvim" "zed" "hypr" "waybar" "fuzzel" "mako" ];
+  appConfigs = [ "ghostty" "nvim" "zed" "hypr" "waybar" "fuzzel" "mako" "noctalia" ];
 in
 {
-  imports = [ ./hyprland.nix ./gtk.nix ];
+  imports = [ ./hyprland.nix ./gtk.nix ./noctalia.nix ];
 
   home.username = "nick";
   home.homeDirectory = "/home/nick";
