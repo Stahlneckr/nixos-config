@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  # Add a session to SDDM without removing the working Plasma session.
+  # Offer a Hyprland/UWSM login session alongside the Plasma fallback.
   # Keep Hyprland and its portal on the same pinned nixpkgs version.
   programs.hyprland = {
     enable = true;

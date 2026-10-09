@@ -98,6 +98,7 @@ let
   };
 in
 {
-  # Manual trial only. Keep the existing Hyprland autostart and lock setup.
+  # Noctalia starts with Hyprland via dotfiles/hypr/hyprland.lua.
+  # Keep the manual helper for switching to/from the Waybar/Mako fallback.
   home.packages = [ pkgs.noctalia trial ];
 }

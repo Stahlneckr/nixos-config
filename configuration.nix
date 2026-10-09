@@ -14,6 +14,8 @@ in
       ./hardware-configuration.nix
       ./modules/amd.nix
       ./modules/hyprland.nix
+      ./modules/greeter.nix
+      ./modules/storage.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -55,8 +57,8 @@ in
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  # Keep KDE Plasma available as a fallback desktop session.
+  # The boot-time login screen is configured in modules/greeter.nix.
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
