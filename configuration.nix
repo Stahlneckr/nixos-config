@@ -16,6 +16,7 @@ in
       ./modules/hyprland.nix
       ./modules/greeter.nix
       ./modules/storage.nix
+      ./modules/backup.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
