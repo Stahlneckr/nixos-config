@@ -54,15 +54,12 @@ in
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  # Hyprland uses Wayland plus XWayland, not a separate Xorg/Plasma desktop.
+  # The Noctalia login screen is configured in modules/greeter.nix.
+  services.xserver.enable = false;
+  services.desktopManager.plasma6.enable = false;
 
-  # Keep KDE Plasma available as a fallback desktop session.
-  # The boot-time login screen is configured in modules/greeter.nix.
-  services.desktopManager.plasma6.enable = true;
-
-  # Configure keymap in X11
+  # Default keyboard layout, also exposed to desktop tools via localectl.
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -92,11 +89,6 @@ in
     description = "Nick Stahlnecker";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
   };
 
   # Enable flakes and the modern Nix CLI

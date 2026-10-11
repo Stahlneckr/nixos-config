@@ -26,7 +26,6 @@ in
     gtk3.extraConfig = commonSettings // {
       gtk-button-images = true;
       gtk-menu-images = true;
-      gtk-modules = "colorreload-gtk-module";
       gtk-toolbar-style = 3;
     };
     gtk4.extraConfig = commonSettings;
