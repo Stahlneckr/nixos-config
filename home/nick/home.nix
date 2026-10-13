@@ -2,7 +2,7 @@
 
 let
   dotfiles = "${config.home.homeDirectory}/Documents/dotfiles";
-  appConfigs = [ "ghostty" "nvim" "zed" "hypr" "waybar" "fuzzel" "mako" "noctalia" ];
+  appConfigs = [ "ghostty" "nvim" "zed" "hypr" "waybar" "fuzzel" "mako" "noctalia" "cliamp" "herdr" ];
 in
 {
   imports = [ ./hyprland.nix ./gtk.nix ./noctalia.nix ];

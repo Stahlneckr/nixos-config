@@ -6,6 +6,7 @@
 
 let
   codex = pkgs.callPackage ./packages/codex.nix { };
+  herdr = pkgs.callPackage ./packages/herdr.nix { };
 in
 
 {
@@ -17,6 +18,7 @@ in
       ./modules/greeter.nix
       ./modules/storage.nix
       ./modules/backup.nix
+      ./modules/tailscale.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -111,6 +113,7 @@ in
     # Terminal
     ghostty
     neovim
+    herdr
 
     # dev
     git
@@ -118,6 +121,8 @@ in
     codex
     zed-editor
 
+    # Media
+    cliamp
 
     # Dependencies
     ripgrep
